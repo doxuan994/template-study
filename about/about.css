@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+    font-family: 'Inconsolata', monospace;
+    text-align: justify;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 68px;
+    Font-weight: 100;
+}
+
+h2 {
+    margin-top: 50px;
+    font-weight: 100;
+}
+
+#site-header ul > li > a {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+#site-header ul > li > a:hover {
+    color: #0095e7;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <title>LAMP Stack</title>
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="all" href="lamp.css" data-turbolinks-track="reload" />
+    <!-- Add font-awesome icon library
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="lamp" >
+    <!-- HEADER -->
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.htm" class="navbar-brand">Home</a>
+            </div>
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.htm">Back to Tech Updates</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><a href="../../index.htm" class="img-responsive brand"><img class="img-responsive" src="../../images/lamp.jpg" alt="Lamp" /></a></div>
+                <div class="col-md-6"><p class="lead">LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It includes Linux, Apache, MySQL, and PHP/Python/Perl and is considered by many the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.</p></div>
+            </div>
+        </div><!-- /.container -->
+    </div>
+    <!-- END OF HEADER -->
+    <!-- BEGIN BODY -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" id="leftCol">
+                <ul class="nav nav-stacked" id="sidebar">
+                    <li><a href="#sec0">Installation</a></li>
+                    <li><a href="#sec1">Lamp Stack Tips and Tricks</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" id="mainCol">
+                <br />
+                <h2 id="sec0">Installation</h2>
+                <br />
+                <!-- Install php5 -->
+                <h2>Step 1: Install php5</h2>
+                <br />
+                <p>Open Terminal -> Copy and Paste the following command lines -> Hit Enter</p>
+                <div class="row"><div class="col-md-6"><pre><code>[sudo] nano /etc/apache2/httpd.conf</code></pre></div></div>
+                <p>Scroll down find php5 -> delete # before it -> control + O -> control + X</p>
+                <p>sudo apachectl restart</p>
+                <p>create an index.php file in cd /Library/WebServer/Documents/</p>
+                <br />
+                <br />
+                <!-- Install MySQL -->
+                <h2>Step 2: Install MySQL</h2>
+                <br />
+                <p>Go to : <a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/ </a>and download the latest version can be changed (Mac OS X 10.12 (x86, 64-bit), DMG Archive) -> No thanks, just start my download -> install the downloaded file -> a popup window are similarly to this one: </p>
+                <p>“2017-05-17T14:38:18.994601Z 1 [Note] A temporary password is generated for root@localhost: gK3y7ojgZu&_ If you lose this password, please consult the section How to Reset the Root Password in the MySQL reference manual.”</p>
+                <h3>Step 2-1: Change your MySQL password</h3>
+                <br />
+                <p>Open your Terminal and Go to this Directory:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ cd /usr/local/mysql/bin</code></pre></div></div>
+                <p>Then type in a commind line below to change your MySQL password:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ ./mysql -u root -p</code></pre></div></div>
+                <p>You will ask to enter your given MySQL password that you received.</p>
+                <p>Enter password: [gK3y7ojgZu&_</p>
+                <p>A message will display very similar to this one:</p>
+                <p>Welcome to the MySQL monitor.  Commands end with ; or \g. <br>
+                    Your MySQL connection id is 11 <br>
+                    Server version: 5.7.18 <br>
+                    Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved. <br>
+                    Oracle is a registered trademark of Oracle Corporation and/or its
+                    affiliates. Other names may be trademarks of their respective
+                    owners. <br>
+                    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement. <br><br>
+                    Change new password for mysql - MySQL 5.7.6 and later: <br>
+                    mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourChoosenPassword'; <br>
+                </p>
+                <br />
+                <!-- Install phpMyAdmin -->
+                <h2>Step 3: Install phpMyAdmin</h2>
+                <br />
+                <p>Download phpMyAdmin -> <a href="https://www.phpmyadmin.net/">https://www.phpmyadmin.net/</a> -> drop to the same folder as index.php -> change its name to phpMyAdmin.
+                    <br />
+                    The index.php is stored in the Documents folder with the folowing directory /Library/WebServer/Documents/</p>
+                <p>Open a new Terminal window and go to Documents directory. Use commmand line below if you do not understand my words:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ cd /Library/WebServer/Documents/</code></pre></div></div>
+                <p>Give the right to use phpMyAdmin:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo chmod o+x phpMyAdmin/</code></pre></div></div>
+                <p>Then go to forward one more to phpMyAdmin directory, use commmand line below if you do not understand my words:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ cd phpMyAdmin/</code></pre></div></div>
+                <p>Create a file in the phpMyAdmin folder named config</p>
+                <p>You can easily do that by using this command line:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ mkdir config</code></pre></div></div>
+                <p>Give the right to use config file you just created, this step is not really important if you can open this file without this command line, then it is not a problem:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo chmod o+x config</code></pre></div></div>
+                <p>Open Browser go to <a href="http://localhost/phpMyAdmin/config/">http://localhost/phpMyAdmin/config/</a></p>
+                <p>A message will display like this:</p>
+                <p>See Forbidden <br />You don't have permission to access /phpMyAdmin/config/ on this server.</p>
+                <p>Then go to <a href="http://localhost/phpMyAdmin/setup/">http://localhost/phpMyAdmin/setup/</a></p>
+                <p>Add password then save.</p>
+                <p>Create new folder in your phpMyAdmin folder</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo mkdir /var/mysql</code></pre></div></div>
+                <p>Open Terminal and in phpMyAdmin directory</p>
+                <div class="row"><div class="col-md-8"><pre><code>$ sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock</code></pre></div></div>
+                <p><b>Note:</b> phpMyAdmin is optional, you can use other MySQL UI software that helps you work with MySQL database.
+                    I prefer Sequel Pro. Download Sequel Pro here: <a href="https://www.sequelpro.com/">https://www.sequelpro.com/</a> </p>
+                <hr />
+                <h2 id="sec1">Lamp Stack Tips and Tricks</h2>
+                <br />
+                <h3>Userful Command Lines</h3>
+                <br />
+                <p>To find the Apache version</p>
+                <div class="row"><div class="col-md-2"><pre><code>$ httpd -v</code></pre></div></div>
+                <p>Start, Stop and Restart Apache</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo apachectl start</code></pre></div></div>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo apachectl stop</code></pre></div></div>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo apachectl -k restart</code></pre></div></div>
+                <p>To check php version</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ php -v</code></pre></div></div>
+                <h3>Set up Apache web server Mac OS in your username folder not in WebServer</h3>
+                <br />
+                <p>Create a new folder in your [username] folder of your Mac called Sites. </p>
+                <h5>Add some text to username.conf file</h5>
+                <p>Then Open your Terminal and copy + paste the following command line:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo nano /etc/apache2/users/[your-mac-user-name].conf</code></pre></div></div>
+                <p>Terminal will display a file editor similarly to this:</p>
+                <p>GNU nano 2.0.6 <br />File: /etc/apache2/users/[YourMacUserName].conf</p>
+                <p>Add the following lines to the script:</p>
+                <xmp>
+                    <Directory "/Users/username/Sites/">
+                        AllowOverride All
+                        Options Indexes MultiViews FollowSymLinks
+                        Require all granted
+                    </Directory>
+                </xmp>
+                <p><b>Note: </b>Be sure to replace “username” with your actual username!</p>
+                <p>
+                    Control+o To Save <br />
+                    Control+x To Exit
+                </p>
+                <h5>Open httpd.conf and allow some modules:</h5>
+                <br />
+                <p>1. Open httpd.conf</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo nano /etc/apache2/httpd.conf</code></pre></div></div>
+                <p>2. Allow all these lines -> delete # before it -> control + O -> control + X:</p>
+                <div class="row">
+                    <div class="col-md-8">
+                        <pre><code>
+                            LoadModule authz_host_module libexec/apache2/mod_authz_host.so
+                            LoadModule authz_core_module libexec/apache2/mod_authz_core.so
+                            LoadModule userdir_module libexec/apache2/mod_userdir.so
+                            LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so
+                            Include /private/etc/apache2/extra/httpd-userdir.conf
+                            Include /private/etc/apache2/extra/httpd-vhosts.conf
+                        </code></pre>
+                    </div>
+                </div>
+                <p>Delete the # in front of these lines:</p>
+                <div class="row">
+                    <div class="col-md-8">
+                        <pre><code>
+                            LoadModule include_module libexec/apache2/mod_include.so
+                            LoadModule userdir_module libexec/apache2/mod_userdir.so
+                            LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+                        </code></pre>
+                    </div>
+                </div>
+                <p>
+                    Search for AllowOverride None -> AllowOverride All <br />
+                    LoadModule php5_module libexec/apache2/libphp5.so <br />
+                    Include /private/etc/apache2/extra/httpd-userdir.conf <br />
+                    Control+o To Save <br />
+                    Control+x To Exit
+                </p>
+                <p>3. Edit httpd-userdir.conf</p>
+                <p>Open Terminal and Copy + Paste this to get to the file for editing:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo nano /etc/apache2/extra/httpd-userdir.conf</code></pre></div></div>
+                <p>Uncomment the following line, removing #:</p>
+                <div class="row"><div class="col-md-6"><pre><code>Include /private/etc/apache2/users/*.conf</code></pre></div></div>
+                <p>Control+o To Save <br />Control+x To Exit</p>
+                <p> In Safari, navigate to your web site with the following address: <br>
+                    http://localhost/ <br>
+                    It should say: <br>
+                    It works! <br>
+                    If this is your first time doing this. Otherwise, if you modified the index.php file then properly something else will display!!!</p>
+                <p>Now try your user home directory:</p>
+                <p>http://localhost/~[your user name]</p>
+                <p><b>Tip:</b> If you cannot get what we experted you can check if your config file got errors by the following command line:</p>
+                <div class="row"><div class="col-md-6"><pre><code>$ sudo apachectl configtest</code></pre></div></div>
+                <h6>Go to: <a href="https://medium.com/@JohnFoderaro/how-to-set-up-apache-in-macos-sierra-10-12-bca5a5dfffba">
+                    https://medium.com/@JohnFoderaro/how-to-set-up-apache-in-macos-sierra-10-12-bca5a5dfffba</a> To see offical articles about
+                    Set up Apache web server Mac OS in your username folder not in WebServer</h6>
+            </div>
+        </div>
+    </div><!-- END BODY -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Add-ons for dropdown menu -->
+    <script src="../../home.js"></script>
+    <!-- Custom JS -->
+    <script src="lamp.js"></script>
+</body>
+</html>

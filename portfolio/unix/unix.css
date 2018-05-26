@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+    font-family: 'Inconsolata', monospace;
+    margin-left: 5px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}

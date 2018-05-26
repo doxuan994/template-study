@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Unix</title>
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/demo_favicon.png" type="image/gif/png" sizes="16x16">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Bootstrap 3.3.7 -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="all" href="unix.css" data-turbolinks-track="reload" />
+    <!-- Add font-awesome icon library
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Topics</h1>
+    <h2>File Management</h2>
+    <h3>Ways to create/delete File or Directory</h3>
+    <!-- Create -->
+    <h4>Create</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Create a New File</td>
+            <td>touch</td>
+            <td>touch newfile</td>
+        </tr>
+        <tr>
+            <td>Create a New Folder (Directory)</td>
+            <td>mkdir</td>
+            <td>mkdir newfolder</td>
+        </tr>
+    </table>
+    <!-- Delete -->
+    <h4>Delete</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Delete a File</td>
+            <td>rm</td>
+            <td></td>
+            <td>rm filename</td>
+        </tr>
+        <tr>
+            <td>Delete a Folder (Directory)</td>
+            <td>rm</td>
+            <td>-r or -rf</td>
+            <td>rm -r foldername</td>
+        </tr>
+        <tr>
+            <td>Delete a empty Folder (Directory)</td>
+            <td>rmdir</td>
+            <td></td>
+            <td>rmdir foldername</td>
+        </tr>
+    </table>
+    <!-- Copy -->
+    <h4>Copy</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Copy an entire directory subtree</td>
+            <td>copy</td>
+            <td>-r</td>
+            <td>copy -r filename/foldername newlocation</td>
+        </tr>
+    </table>
+    <!-- Move or Rename -->
+    <h4>Move/Rename</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Move/Rename</td>
+            <td>mv</td>
+            <td></td>
+            <td>mv oldname newname</td>
+        </tr>
+    </table>
+    <h3>Ways to look at File</h3>
+    <!-- View -->
+    <h4>View the contents of a File on the screen</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Options after the contents displayed</th>
+            <th>Meaning</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>View the contents of a File</td>
+            <td>more</td>
+            <td>SPACE</td>
+            <td>down one page</td>
+            <td>more filename then when the contents display hit SPACE to down one page</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>more</td>
+            <td>b</td>
+            <td>up one page</td>
+            <td>more filename then when the contents display hit b to up one page</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>more</td>
+            <td>d</td>
+            <td>down one-half page</td>
+            <td>more filename then when the contents display hit d to down one-half page</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>more</td>
+            <td>RETURN</td>
+            <td>down one line</td>
+            <td>more filename then when the contents display hit RETURN to down one line</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>more</td>
+            <td>q</td>
+            <td>down one line</td>
+            <td>more filename then when the contents display hit q to quit</td>
+        </tr>
+    </table>
+    <!-- Show -->
+    <h4>Show the beginning/end of output or a File</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Examples</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td>Show the beginning of output or a file</td>
+            <td>head</td>
+            <td>-numbers</td>
+            <td>head -15</td>
+            <td>Show 15 lines at the beginning</td>
+        </tr>
+        <tr>
+            <td>Show the end of output or a file</td>
+            <td>tail</td>
+            <td>-numbers</td>
+            <td>tail -15</td>
+            <td>Show 15 lines at the end</td>
+        </tr>
+    </table>
+    <!-- Play with File -->
+    <h4>Create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Meaning</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>View the contents of a File</td>
+            <td>cat</td>
+            <td>-v</td>
+            <td>verbose - Show control characters with ^ notation</td>
+            <td>cat -v filename</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>cat</td>
+            <td>-e</td>
+            <td>Mark the end of the line with a $</td>
+            <td>cat -e filename</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>cat</td>
+            <td>-t</td>
+            <td>Show tab characters as ^I</td>
+            <td>cat -t filename</td>
+        </tr>
+    </table>
+    <!-- Options -->
+    <h4>Display with more options</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Identify the contents of a File</td>
+            <td>file</td>
+            <td></td>
+            <td>file filename</td>
+        </tr>
+        <tr>
+            <td>Word count</td>
+            <td>wc</td>
+            <td></td>
+            <td>wc filename</td>
+        </tr>
+    </table>
+    <h3>Ways to look at Directory</h3>
+    <!-- List -->
+    <h4>List Files and Directories</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Meaning</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-l</td>
+            <td>Long format listing</td>
+            <td>ls -l</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-d</td>
+            <td>Information about the directory, not the files in it</td>
+            <td>ls -d</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-r</td>
+            <td>Reverse the order of the output</td>
+            <td>ls -r</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-t</td>
+            <td>Sort files by time instead of name</td>
+            <td>ls -t</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-a</td>
+            <td>Show all files, even those whose names begin with a period</td>
+            <td>ls -a</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-F</td>
+            <td>Mark file types with special chars</td>
+            <td>ls -F</td>
+        </tr>
+        <tr>
+            <td>List Files and Directories</td>
+            <td>ls</td>
+            <td>-s</td>
+            <td>Include file size in blocks with output</td>
+            <td>ls -s</td>
+        </tr>
+    </table>
+    <h4>pwd - print working directory</h4>
+    <p>Print the absolute pathname of your current location in the directory tree.</p>
+    <h3>Setting permissions</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Command Lines</th>
+            <th>Flags</th>
+            <th>Mean</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Change a File Mode</td>
+            <td>chmod</td>
+            <td>-755</td>
+            <td>Set Public Permission</td>
+            <td>chmod -755 filename</td>
+        </tr>
+    </table>
+
+    <hr />
+    <h2>Text Filters & Regular Expressions: Grep & Sed</h2>
+    <!-- grep -->
+    <h3>grep</h3>
+    
+
+    <button><a href="../index.htm">Go back</a></button>
+
+</body>
+</html>

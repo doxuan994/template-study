@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+.laravel {
+  padding-top: 50px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  text-align: justify;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+#masthead {
+  min-height: 270px;
+  background-color: #f1f1e9;
+  color: #f14e32;
+}
+
+#masthead .brand {
+  margin-top: 4%;
+  color: #f04f33;
+  text-decoration: none;
+}
+
+#masthead .well {
+  margin-top: 13%;
+  background-color: #111155;
+  border-color: #000033;
+}
+
+.icon-bar {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #masthead .brand {
+    font-size: 80px;
+  }
+}
+
+.navbar-bright {
+  background-color: #f04f33;
+}
+
+.navbar-brand:hover {
+  background-color: white;
+}
+
+.navbar-bright a, #masthead a, #masthead .lead {
+  color: #0e0e0e;
+}
+
+.navbar-bright li > a:hover {
+  background-color: white;
+}
+
+.affix-top, .affix {
+  position: static;
+}
+
+#sidebar li {
+  border-bottom: 1px solid #eee;
+}
+
+#sidebar li.active {
+  border-right: 5px solid #eee;
+}
+
+#mainCol h2 {
+  padding-top: 55px;
+  margin-top: -55px;
+}
+
+@media (min-width: 992px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top: 30px;
+    width: 228px;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top: 70px;
+    width: 228px;
+  }
+}
