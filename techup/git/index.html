@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <title>Git/GitHub</title>
-    <!-- Responsive meta tag -->
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- Latest compiled and minified CSS -->
+    <meta name="description" content="A fixed side navigation menu.">
+    <meta name="author" content="Xuan Do">
+
+    <title>Git and GitHub - Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" media="all" href="git.css" data-turbolinks-track="reload" />
-    <!-- Add font-awesome icon library
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Custom fonts for this template -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="git.css">
+
 </head>
 
 <body class="git" >
+
+    <!-- Header Area
+    ------------------------------------------>
+
     <header class="navbar navbar-bright navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -27,74 +35,74 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../../index.htm" class="navbar-brand">Home</a>
+                <a href="../../index.html" class="navbar-brand">Home</a>
             </div>
+
+            <!-- Navigation -->
             <nav class="collapse navbar-collapse navbar-right" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li><a href="../index.htm">Back to Tech Updates</a></li>
-                    <li><a href="#">Hire Me</a></li>
+                    <li><a href="../index.html">Back</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div id="masthead">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img class="img-responsive h1" src="../../images/git.png" alt="Git" />
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../../images/git.png" alt="Git Logo" />
                     <p class="lead">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
                 </div>
             </div>
-        </div><!-- /cont -->
+        </div>
     </div>
-        <!-- Begin Body -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3" id="leftCol">
-                    <ul class="nav nav-stacked" id="sidebar">
-                        <li><a href="#sec0">Installation Git</a></li>
-                        <li><a href="#sec1">GitHub</a></li>
-                    </ul>
-                </div>
 
-                <div class="col-md-9" id="mainCol">
-                    <br />
-                    <h2 id="sec0">Installation Git</h2>
-                    <br />
-                    <h4>Step 1: Download git</h4>
-                    <p>Download Git for mac go to <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p>
-                    <h4 >Step 2: Checking Your Settings</h4>
-                    <p>
-                        If you want to check your settings, you can use the git config --list command to list all the settings Git can find at that point:
-                    </p>
+    <!-- // Header Area -->
+
+    <!-- Body Area -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar Left -->
+            <div class="col-lg-3" id="leftCol">
+                <ul class="nav nav-stacked" id="sidebar">
+                    <li><a href="#git">Git</a></li>
+                    <li><a href="#github">GitHub</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-9" id="mainCol">
+
+                <section id="git">
+                    <h3>Git</h3>
+                    <h4>Step 1: Download <a href="https://git-scm.com/downloads" target="_blank">git</a></h4>
+                    <h4>Step 2: Checking Your Settings</h4>
+                    <p>If you want to check your settings, you can use the git config --list command to list all the settings Git can find at that point:</p>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-lg-3">
                             <pre><code>$ git config --list</code></pre>
                         </div>
                     </div>
-                    <p>
-                        <b>Note: </b> There are bunch of information you can find but focus on the user.name= and user.email=.
-                        If you can find them then you are good to go. Otherwise, keep reading!!!
-                    </p>
-                    <hr />
+                    <p><b>Note:</b> There are bunch of information you can find but focus on the user.name= and user.email=. If you can find them then you are good to go. Otherwise, keep reading!!!</p>
                     <h4>Step 3: Config git Username and Email</h4>
                     <p>Use the following command lines to config your git username and email</p>
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-lg-5">
                             <pre><code>$ git config -—global user.name [username]</code></pre>
                             <pre><code>$ git config -—global user.email [email]</code></pre>
                         </div>
                     </div>
                     <p><b>Tip: </b>You can check specific user name or user email by following command lines:</p>
                     <div class="row">
-                        <div class="col-md-8">
-                            <pre><code>
-                                $ git config user.name
-                                $ git config user.email
-                            </code></pre>
+                        <div class="col-lg-3">
+                            <pre><code>$ git config user.name</code></pre>
+                            <pre><code>$ git config user.email</code></pre>
                         </div>
                     </div>
-                    <hr />
+
+                    <!-- Step 4 -->
                     <h4 >Step 4: Initializing a Repository in an Existing Directory</h4>
                     <p>
                         <b>Note: </b>With the 3 steps above you are ready to use Git command lines.
@@ -105,16 +113,23 @@
                             <p>1. Create a folder with command lines:</p>
                             <pre><code>$ mkdir my_git_folder</code></pre>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-4">
                             <p>2. Go to git folder, you just created with command line:</p>
                             <pre><code>$ cd my_git_folder</code></pre>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-4">
                             <p>3. To create a new git repository. Use command line:</p>
                             <pre><code>$ git init</code></pre>
                             <p>This command line above will initialize an empty Git repository in this directory /Users/username/git/.git/</p>
                         </div>
                     </div>
+                    <!-- // Step 4 -->
+
+                    <!-- // Step 5 -->
                     <h4 >Step 5: Make Your First Git Commit</h4>
                     <p>1. Open text editor and create a simple index.html file and save it to the "my_git_folder" folder.</p>
                     <p>
@@ -151,9 +166,13 @@
                     <br />
                     <p><b>Note:</b> Because my_git_folder is initialied when I created it on step 4, so in this step I only need to add my changes.</p>
                     <h5>To read offical documentation please visit Git website <a href="https://git-scm.com/">https://git-scm.com/</a></h5>
+
+                    <!-- // Step 5 -->
                     <hr>
-                    <h2 id="sec1">GitHub</h2>
-                    <br />
+                </section>
+
+                <section id="github">
+                    <h3>GitHub</h3>
                     <p>
                         GitHub is a website where you can upload a copy of your Git repository. If you want know how to create a GitHub account visit GitHub website here
                         <a href="https://github.com/">https://github.com/</a>. <br>
@@ -237,14 +256,28 @@
                             <pre><code>$ git push origin master</code></pre>
                         </div>
                     </div>
-                </div>
+                </section>
+
+
+
+
+
+
+
             </div>
-        </div>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- Add-ons for dropdown menu -->
-        <script src="../../home.js"></script>
-        <!-- Custom JS -->
-        <script src="git.js"></script>
+            <!-- // Content -->
+
+        </div><!-- /.row -->
+
+    </div>
+    <!-- // Body Area -->
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Add-ons for dropdown menu -->
+    <script src="add-on.js"></script>
+    <!-- Custom JS -->
+    <script src="git.js"></script>
 </body>
 </html>
